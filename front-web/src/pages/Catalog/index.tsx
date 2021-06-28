@@ -8,7 +8,7 @@ import './styles.scss';
 import Pagination from 'core/components/Pagination';
 import ProductFilters from 'core/components/ProductFilters';
 
-const Catalog = () => {
+const Catalog = () => { 
 
     const [productsResponse, setProductsResponse] = useState<ProductsResponse>();
     const [isLoading, setIsLoading] = useState(false);
@@ -54,7 +54,7 @@ const Catalog = () => {
 
     return (
         <div className="catalog-container">
-            <div className="d-flex justify-content-between">
+            <div className="filter-container">
                 <h1 className="catalog-title">
                     Catálogo de Produtos
                 </h1>
