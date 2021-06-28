@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
 import './styles.scss';
 
-const Navbar = () => {
+const Navbar = () => { 
     const [currentUser, setCurrentUser] = useState('');
     const location = useLocation();
 
@@ -18,13 +18,13 @@ const Navbar = () => {
     }, [location]);
     
     return (
-        <nav className="row bg-primary main-nav">
-            <div className="col-3">
+        <nav className="bg-primary main-nav">
+         
                 <Link to="/" className="nav-logo-text">
                     <h4>DS Catalog</h4>
                 </Link>
-            </div>
-            <div className="col-6">
+ 
+            <div className="menu-container">
                 <ul className="main-menu">
                     <li>
                         <NavLink className="nav-link" to="/" activeClassName="active" exact>HOME</NavLink>
@@ -37,13 +37,13 @@ const Navbar = () => {
                     </li>
                 </ul>
             </div>
-            <div className="col-3 text-right">
+            <div className="text-right">
                { currentUser && (
                    <>
-                    {currentUser}
                     <a href="logout" className="nav-link active d-inline" onClick={handleLogout}>
                         LOGOUT
                     </a>
+                    <div className="ml-5">{currentUser}</div>
                    </>
                )}
                 { !currentUser && (
