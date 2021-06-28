@@ -2,13 +2,10 @@
     display: flex;
     padding: 40px 40px 100px 0;
     justify-content: center;
-    background: url(~core/assets/images/background-login.svg) no-repeat;
+    background: url(~core/assets/images/background-login.svg) no-repeat bottom;
     background-size: 100%;
 }
 
-.auth-info {
-
-}
 
 .auth-info-title {
     font-size: 55px;
@@ -27,6 +24,9 @@
     color: #9E9E9E;
 }
 
-.auth-content {
+@media (max-width: 768px) {
 
+    .auth-info {
+        display: none;
+    }
 }

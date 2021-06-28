@@ -5,7 +5,7 @@ import './styles.scss';
 
 const Navbar = () => (
     <nav className="admin-nav-container">
-        <ul>
+        <ul> 
             <li>
                 <NavLink to="/admin/products" className="admin-nav-item">
                     Meus Produtos
