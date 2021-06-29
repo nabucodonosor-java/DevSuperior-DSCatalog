@@ -7,6 +7,7 @@ import CardLoader from '../Loaders/ProductCardLoader';
 import Card from '../Card';
 import Pagination from 'core/components/Pagination';
 import ProductFilters  from 'core/components/ProductFilters';
+import './styles.scss';
 
 
 const List = () => {
@@ -75,8 +76,8 @@ const List = () => {
 
     return (
         <div className="admin-products-list">
-            <div className="d-flex justify-content-between">
-                <button className="btn btn-primary btn-lg mr-5" onClick={handleCreate}>
+            <div className="admin-products-btn-filter">
+                <button className="btn btn-primary btn-lg admin-products-btn" onClick={handleCreate}>
                     ADICIONAR
                 </button>
                 <ProductFilters

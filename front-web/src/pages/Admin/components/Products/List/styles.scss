@@ -1,0 +1,19 @@
+.admin-products-btn-filter {
+    display: flex;
+
+}
+
+.admin-products-btn {
+    margin-right: 10px;
+}
+
+@media (max-width: 576px) {
+    .admin-products-btn-filter {
+        display: block;
+    }
+
+    .admin-products-btn {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}

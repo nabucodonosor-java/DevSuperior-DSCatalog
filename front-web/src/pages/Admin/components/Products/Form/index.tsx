@@ -8,7 +8,7 @@ import BaseForm from '../../BaseForm';
 import Select from 'react-select';
 import PriceField from './PriceField';
 import ImageUpload from '../ImageUpload';
-import './styles.scss';
+import './styles.scss'; 
 
 export type FormState = {
     name: string;
@@ -77,11 +77,11 @@ const Form = () => {
         setUploadedImgUrl(imgUrl);
     }
 
-    return (
+    return ( 
         <form onSubmit={handleSubmit(onSubmit)}>
             <BaseForm title={formTitle}>
-                <div className="row">
-                    <div className="col-6">
+                <div className="product-form-container">
+                    <div>
 
                             <div className="margin-bottom-30">
                                 <input 
@@ -142,7 +142,7 @@ const Form = () => {
                         <textarea
                         ref={register({ required: "Campo obrigatório "})}
                         name="description"
-                        className="form-control input-base"
+                        className="form-control input-base input-area"
                         placeholder="Descrição"
                         cols={30} 
                         rows={10}    

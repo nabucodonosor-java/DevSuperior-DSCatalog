@@ -4,7 +4,7 @@ import './styles.scss';
 
 type Props = {
     title: string;
-    children: React.ReactNode;
+    children: React.ReactNode; 
 }
 
 const BaseForm = ( { title, children }: Props) => {    

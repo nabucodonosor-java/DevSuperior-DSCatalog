@@ -52,7 +52,18 @@
         justify-content: space-around;
         padding-left: 0px;
         background: #F2F2F2;
+    }  
+}
+
+@media (max-width: 576px) {
+
+    .admin-nav-container {
+        height: 90px;
     }
 
-   
+    .admin-nav-item {
+        width: 100px;
+        height: 50px;
+        font-size: 0.8em;
+    }
 }

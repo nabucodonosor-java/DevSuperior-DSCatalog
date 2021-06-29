@@ -4,7 +4,7 @@ import { Product } from 'core/types/Products';
 import './styles.scss';
 
 type Props = {
-    product: Product;
+    product: Product; 
 }
 
 const ProductCard = ({ product }: Props) => (
