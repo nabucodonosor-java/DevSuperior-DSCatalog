@@ -36,7 +36,8 @@ const List = () => {
     }, [activePage, name, category]);
 
     useEffect(() => {
-        getProducts();    
+        getProducts();
+        window.scrollTo(0, 0)   
     }, [getProducts]);
     
     const handleChangeName = (name: string) => {

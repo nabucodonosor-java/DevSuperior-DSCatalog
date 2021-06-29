@@ -52,6 +52,7 @@ const Form = () => {
         makeRequest({ url: '/categories' })
             .then(response => setCategories(response.data.content))
             .finally(() => setIsLoadingCategories(false));
+            window.scrollTo(0, 0)
     }, []);
 
     const onSubmit = (data: FormState) => {

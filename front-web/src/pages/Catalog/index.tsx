@@ -34,6 +34,7 @@ const Catalog = () => {
 
     useEffect(() => {
         getProducts();
+        window.scrollTo(0, 0)
     }, [getProducts]);
 
     const handleChangeName = (name: string) => {
