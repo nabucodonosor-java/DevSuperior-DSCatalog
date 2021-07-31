@@ -47,11 +47,7 @@ public class ProductRepositoryTests {
 	@Test
 	public void findShouldReturnCategoryWhenOnlyCategoryElectronicsSelected() {
 		
-		Category electronics = CategoryFactory.createCategory(2L, "Electronics");
-		
-		List<Category> list = new ArrayList<>();
-		
-		list.add(electronics);
+		List<Category> list = CategoryFactory.createListWithElectronicasCategoriesOnly();
 		
 		Page<Product> result = repository.find(list, "", pageRequest);
 		
@@ -62,11 +58,7 @@ public class ProductRepositoryTests {
 	@Test
 	public void findShouldReturnCategoryWhenOnlyCategoryBooksSelected() {
 		
-		Category books = CategoryFactory.createCategory(1L, "Books");
-		
-		List<Category> list = new ArrayList<>();
-		
-		list.add(books);
+		List<Category> list = CategoryFactory.createListWithBooksCategoriesOnly();
 		
 		Page<Product> result = repository.find(list, "", pageRequest);
 		
@@ -77,15 +69,7 @@ public class ProductRepositoryTests {
 	@Test
 	public void findShouldReturnCategoryWhenAllCategorySelected() {
 		
-		Category books = CategoryFactory.createCategory(1L, "Books");
-		Category electronics = CategoryFactory.createCategory(2L, "Electronics");
-		Category computers = CategoryFactory.createCategory(3L, "Computers");
-		
-		List<Category> list = new ArrayList<>();
-		
-		list.add(books);
-		list.add(electronics);
-		list.add(computers);
+		List<Category> list = CategoryFactory.createListWithAllCategories();
 		
 		Page<Product> result = repository.find(list, "", pageRequest);
 		
